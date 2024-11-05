@@ -9,7 +9,7 @@ slt.set_page_config(layout="wide")
 slt.header(':blue[Cardheko-Price Prediction 🚗]')
 
 # Load data
-df = pd.read_csv("final_df.csv")
+df = pd.read_csv("F:/praveena/DataScience/Mini_Project/Car-Dheko-Used-Car-Price-Prediction/final_df.csv")
 print(df.columns)
 
 # Streamlit interface
