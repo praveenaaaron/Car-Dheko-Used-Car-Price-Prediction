@@ -6,10 +6,11 @@ import numpy as np
 
 # page setting
 slt.set_page_config(layout="wide")
-slt.header(':blue[Cardheko-Price Prediction 🚗]')
+slt.title("Streamlit App :blue[Cardheko-Price Prediction 🚗]")
+
 
 # Load data
-df = pd.read_csv("F:/praveena/DataScience/Mini_Project/Car-Dheko-Used-Car-Price-Prediction/final_df.csv")
+df = pd.read_csv("C:/Users/Dell/final_df.csv")
 print(df.columns)
 
 # Streamlit interface
@@ -29,13 +30,16 @@ with col1:
 
 
     Model=slt.selectbox("Model",options=filtered_models)
-
     Model_year = slt.selectbox("Model Year", options=sorted(df['modelYear'].unique()))
     
     
     IV = slt.selectbox("Insurance Validity", ['Third Party insurance', 'Comprehensive', 'Third Party',
                                               'Zero Dep', '2', '1', 'Not Available'])
     
+    
+
+with col2:
+   
     Km = slt.slider("Kilometers Driven", min_value=100, max_value=100000, step=1000)
 
     ML = slt.number_input("Mileage", min_value=5, max_value=50, step=1)  
@@ -45,8 +49,6 @@ with col1:
     color = slt.selectbox("Color", df['Color'].unique())
 
     city = slt.selectbox("City", options=df['City'].unique())
-
-with col2:
     Submit = slt.button("Predict")
 
     if Submit:
