@@ -20,7 +20,7 @@ model into an interactive web application using Streamlit.
 * Model Deployment
 * Streamlit Application Development
 * Documentation and Reporting
-* 
+  
 ## Results: 
 ### Random Forest: 
 * Achieved the best performance with the highest R² and the lowest 
